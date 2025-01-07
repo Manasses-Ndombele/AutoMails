@@ -6,6 +6,9 @@ import './routeBase.sass'
 
 export default function Home() {
     function submitForm() {
+        let mainBtn = document.querySelector('button#send-form')
+        mainBtn.setAttribute('disabled', '')
+        mainBtn.innerHTML = '<div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div>'
         let senderEmail = document.querySelector('input#sender-email')
         let senderName = document.querySelector('input#sender-name')
         let senderServerEmail = document.querySelector('select#sender-server-email')
