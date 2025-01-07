@@ -60,7 +60,7 @@ export default function Home() {
 
         const sendForm = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/send-emails", {
+                const response = await fetch("https://automails.onrender.com/api/send-emails", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -108,5 +108,9 @@ def receive_emails():
     except KeyError as e:
         return jsonify({"erro": f"Chave ausente: {str(e)}"}), 400
 
+@app.route('/')
+def home():
+    return "O Backend de AutoMails está rodando com sucesso!"
+
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=8080)
