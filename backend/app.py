@@ -1,11 +1,12 @@
 import smtplib
+import os
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
-app.secret_key = 'dbc226ffe88fd0f0b08be03f5fadf9bcf91984d276253ad791b50c8382eda85a'
+app.secret_key = os.getenv('APP_SECRET_KEY')
 CORS(app)
 
 def send_email(sender_email, sender_name, sender_server_email, sender_password_email, recipients_emails, subject, message):
@@ -108,4 +109,4 @@ def receive_emails():
         return jsonify({"erro": f"Chave ausente: {str(e)}"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=8080)
