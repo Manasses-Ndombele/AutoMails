@@ -4,6 +4,9 @@
 
 **AutoMails** é um projeto com objetivo de fazer automação de envio de email com Python usando SMTPLib.
 
+![Imagem do projeto](https://drive.google.com/uc?id=1hk3soP33Q3RMTlTS_iy3pQ6T57g6LplW)
+Link do site: [AutoMails](https://automails.vercel.app/)
+
 Link para download do executável: [AutoMails](https://drive.google.com/file/d/1hSU3jXeXxMuFxfIw1015TA42rkQNt2-U/view?usp=sharing)
 
 ### Tecnologias usadas:
